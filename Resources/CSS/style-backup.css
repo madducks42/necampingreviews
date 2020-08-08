@@ -13,11 +13,12 @@ html {
 }
 
 body {
-  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
   width: 100%;
   margin: 0 auto;
   background-color: #FFFFFF;
 }
+
 
 a {
   text-decoration: none;
@@ -31,30 +32,30 @@ a:hover {
 h1 {
   font-size: 3.5rem;
   font-weight: bold;
-  font-family: Georgia,serif;;
+  font-family: Papyrus;
   color: black;
   text-shadow: 2px 2px 2px #FFFFFF;
 }
 
 h2 {
-  font-size: 2.2rem;
-  font-weight: 300;
+  font-size: 2.5rem;
+  font-weight: bold;
   color: black;
-  font-family: Georgia,serif;
+  font-family: Papyrus;
   text-shadow: 2px 2px 2px #FFFFFF;
 }
 
 h3 {
-  font-size: 1.9rem;
-  font-weight: 200;
+  font-size: 2rem;
+  font-weight: 500;
   color: black;
-  font-family: Georgia,serif;
+  font-family: Papyrus;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: black;
-  font-family: Georgia,serif;
+  font-family: Papyrus;
   text-shadow: 1px 1px 1px #FFFFFF;
   line-height: 1.4;
   text-decoration: underline;
@@ -64,16 +65,17 @@ h4 {
 h5 {
   font-size: 1.3rem;
   color: black;
-  font-family: Georgia,serif;
+  font-family: Papyrus;
   text-decoration: underline;
   text-decoration-style: dotted;
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: black;
   font-weight: 100;
-  line-height: 1.3;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.2;
 }
 
 ul {
@@ -82,12 +84,15 @@ ul {
 }
 
 li {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: black;
-  font-weight: 30;
+  font-weight: 50;
   padding-top: 2px;
   padding-bottom: 2px;
+  font-size: 1rem;
   color: black;
+  font-weight: 100;
+  font-family: Helvetica, sans-serif;
   line-height: 1.2;
 }
 
@@ -106,15 +111,10 @@ li {
 
 /* Header Style */
 
-
-/* Desktop Header Style */
-
-@media only screen and (min-width: 1024px) {
-
 header {
   display: flex;
-  justify-content: space-between;
-  height: 150px;
+  align-items: center;
+  height: 64px;
   width: 100%;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -123,143 +123,111 @@ header {
   border-bottom: 10px solid black;
 }
 
-.logo {
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-bottom: 5px;
+.logo-big {
+  display: inline;
+  padding-left: 5px;
+  padding-right: 180px;
 }
 
-.logo img{
-  height: 95%;
-  width: 200px;
+.logo-big img{
+  height: 80%;
+  width: 500px;
+}
+
+header .logo-small {
+  display: none;
+  height: 80%;
+}
+
+header .logo-small,
+header .logo-big {
+  flex-grow: 1;
 }
 
 nav li {
-  display: inline-block;
-  padding-top: 100px;
+  display: inline;
   padding-right: 2rem;
 }
+
+@media only screen and (max-width: 990px) {
+  header .logo-big {
+    display: none;
+  }
+
+  header .logo-small {
+    display: flex;
+  }
+
+  header img {
+    width: 40%;
+  }
 }
-/* Tablet Header Style */
 
-@media only screen
-  and (min-width: 481px)
-  and (max-width: 1023px)
-  {
+@media only screen and (max-width: 540px) {
+  header {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  height: 150px;
-  width: 100%;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  background-color: #FFFFFF;
-  position: fixed;
+  header .logo-small {
+    margin-bottom: 1rem;
+  }
+}
+
+/* About Landing Style */
+
+.landingimage {
+  background-image: url("../Images/Home/bonsairock_landing.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   border-bottom: 10px solid black;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: flex-end;
+
 }
-
-.logo {
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-bottom: 5px;
-}
-
-.logo img{
-  height: 95%;
-  width: 200px;
-}
-
-nav li {
-  display: inline-block;
-  padding-top: 100px;
-  padding-right: 2rem;
-}
-}
-
-/* Phone Header Style */
-
-@media only screen
-  and (min-width: 320px)
-  and (max-width: 480px)
-  {
-    header {
-      display: flex;
-      justify-content: space-between;
-      height: 150px;
-      width: 100%;
-      padding-top: 2px;
-      padding-bottom: 2px;
-      background-color: #FFFFFF;
-      position: fixed;
-      border-bottom: 10px solid black;
-    }
-
-    .logo {
-      width: 40%;
-      padding-top: 5px;
-      padding-left: 20px;
-      padding-bottom: 5px;
-    }
-
-    .logo img{
-      height: 100%;
-      width: 100%;
-    }
-
-    nav {
-      padding-top: 20px;
-      padding-right: 15px;
-    }
-
-    nav li {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding-bottom: 5px;
-    }
-}
-
 
 /* About Me Style */
 
-#aboutus {
+#aboutme {
   background-color: #FFFFFF;
-  padding-top: 250px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.aboutus-flex {
+.aboutme-flex {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: auto;
-  padding-top: 200px;
+  min-height: 500px;
+  align-items: center;
 }
 
-.aboutus-left {
-  width: 40%;
+.aboutme-left {
+  width: 30%;
   height: auto;
-  padding: 40px;
+  padding: 20px;
 }
 
-.aboutus-left img {
+.aboutme-left img {
   width: 100%;
   height: auto;
   border:1px solid #021a40;
 }
 
-.aboutus-middle {
-  width: 40%;
+.aboutme-middle {
+  width: 50%;
   height: auto;
   padding: 32px 24px;
+  text-align: justify;
 }
 
-.aboutus-content h4 p {
+.aboutme-content h4 p {
   color: black;
 }
 
-.aboutus-right {
+.aboutme-right {
   width: 20%;
   height: auto;
   background-color: #D1D2D5;
@@ -271,7 +239,6 @@ nav li {
 
 .socialmedia {
 display: flex;
-padding: 2px;
 align-items: center;
 }
 
@@ -280,88 +247,113 @@ align-items: center;
   max-height: 50px;
 }
 
-/* @media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1080px) {
 
-  .aboutus-left img {
+  .aboutme-left img {
     display: none;
   }
 
-} */
+}
 
-/* Collections Style */
+  /* Trips Style */
 
-#collections {
+#trips {
   background-color: #D1D2D5;
   width: 100%;
   height: auto;
-  padding-top: 100px;
-  border-top: 20px solid black;
+  border-top: 10px solid black;
 }
 
-#collections h2 {
-  padding-top: 60px;
-  padding-bottom: 10px;
+#trips h1 {
+  padding-top: 20px;
   text-align: center;
 }
 
-#collections p {
-  padding-top: 5px;
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-bottom: 5px;
-}
-
-#collections a:link {
-  text-decoration: underline;
-  font-weight: 400;
-}
-
-#collections .flexcontainer {
+#trips .flexcontainer {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   height: auto;
   padding-bottom: 32px;
+
 }
 
-.collections_post {
+.tripspost {
   display: flex;
   flex-direction: column;
-  width: 500px;
-  height: auto;
+  width: 320px;
+  height: 320px;
   margin: 10px;
   background-color: #FFFFFF;
   justify-content: center;
   flex-wrap: wrap;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
-.collections_info {
-  width: auto;
-  height: 90%;
-  padding: 20px;
+.tripsinfo {
+  width: 300px;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
 }
 
-.collections_info h4 {
+.tripsinfo h3 {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 700;
   text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
   text-decoration: underline;
 }
 
-.collections_info img {
-  width: 100%;
-  height: auto;
+.tripsinfo img {
+  width: 300px;
+  height: 200px;
   padding-left: 2px;
 }
 
-.collections_info p {
-padding: 10px;
-text-align: center;
+.tripsinfo p {
+padding-top: 10px;
 }
+
+/*Lightbox Color Backgrounds*/
+
+/* #arenal {
+  background-color: #FFFFFF;
+}
+
+#drake {
+  background-color: #D1D2D5;
+}
+
+#adirondacks {
+  background-color: #FFFFFF;
+}
+
+#glencanyon {
+  background-color: #FFFFFF;
+}
+
+#southrim {
+  background-color: #FFFFFF;
+}
+
+#tahoe {
+  background-color: #FFFFFF;
+}
+
+#summer_acadia {
+  background-color: #FFFFFF;
+}
+
+#winter_acadia {
+  background-color: #D1D2D5;
+}
+
+#zion {
+  background-color: #FFFFFF;
+} */
 
 /*Lightbox Gallery Style*/
 
@@ -388,24 +380,7 @@ text-align: center;
   padding: 5px;
 }
 
-/*Footer Style*/
-
-footer {
-  background-color: #D1D2D5;
-  border-top: 1px solid Black;
-  height: 30px;
-}
-
-footer p {
-  font-size: 1rem;
-  color: black;
-  font-weight: 100;
-  padding: 5px;
-  margin-left: 10px;
-}
-
-/*
-Blog Style
+/* Blog Style */
 
 #blog {
   background-color: #D1D2D5;
@@ -455,7 +430,7 @@ Blog Style
   font-weight: 400;
 }
 
-Prints Style
+/* Prints Style */
 
 #prints {
   background-color: #D1D2D5;
@@ -560,4 +535,19 @@ padding: 10px 50px;
   padding-bottom: 32px;
   margin-top: 30px;
 }
-*/
+
+/*Footer Style*/
+
+footer {
+  background-color: #D1D2D5;
+  border-top: 1px solid Black;
+  height: 30px;
+}
+
+footer p {
+  font-size: 1rem;
+  color: black;
+  font-weight: 100;
+  padding: 5px;
+  margin-left: 10px;
+}
