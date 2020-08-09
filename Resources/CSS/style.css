@@ -717,186 +717,182 @@ nav li {
   border-top: 10px solid black;
 }
 
-/*Available Prints Style*/
+/*Trailer Mods Style*/
 /************************/
 
-.prints_grid{
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 300px 300px 300px 300px 1fr;
-  grid-template-rows: 80px
-                      auto
-                      auto
-                      auto
-                      auto;
-  grid-template-areas: "header header header header header header"
-                       "astro astro astro astro astro astro"
-                       "grand grand grand grand grand grand"
-                       "magnets magnets magnets magnets magnets magnets"
-                       "coasters coasters coasters coasters coasters coasters"
-                       "footer footer footer footer footer footer";
-  min-height: 100vh;
-  min-width:430px;
-}
+  .mods_grid {
+    display: grid;
+
+    grid-template-columns: 1fr 250px 250px 250px 250px 1fr;
+    grid-template-rows: 100px
+                        auto
+                        auto;
+    grid-template-areas: "header header header header header header"
+                         ". content content content content ."
+                         "footer footer footer footer footer footer";
+    min-height: 100vh;
+  }
+
 
 
 @media screen and (min-width: 1025px) and (max-width: 1400px){
-    .prints_grid{
+    .mods_grid{
       grid-template-columns: 1fr 250px 250px 250px 250px 1fr;
-      grid-template-rows: 80px
-                          auto
-                          auto
+      grid-template-rows: 100px
                           auto
                           auto;
       grid-template-areas: "header header header header header header"
-                           "astro astro astro astro astro astro"
-                           "grand grand grand grand grand grand"
-                           "magnets magnets magnets magnets magnets magnets"
-                           "coasters coasters coasters coasters coasters coasters"
+                           ". content content content content ."
                            "footer footer footer footer footer footer";
    }
-   .blog_tips {
+
+   .mods_tips {
      align-content: center;
    }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px){
-    .prints_grid{
-      grid-template-columns: 1fr 120px 120px 120px 120px 1fr;
-      grid-template-rows: 80px
-                          auto
-                          auto
+@media screen and (min-width: 900px) and (max-width: 1024px){
+    .mods_grid{
+      grid-template-columns: 1fr 175px 175px 175px 175px 1fr;
+      grid-template-rows: 100px
                           auto
                           auto;
       grid-template-areas: "header header header header header header"
-                           "astro astro astro astro astro astro"
-                           "grand grand grand grand grand grand"
-                           "magnets magnets magnets magnets magnets magnets"
-                           "coasters coasters coasters coasters coasters coasters"
+                           ". content content content content ."
                            "footer footer footer footer footer footer";
      }
 
 }
 
-@media screen and (min-width: 641px) and (max-width: 768px){
-    .prints_grid{
+@media screen and (min-width: 641px) and (max-width: 899px){
+    .mods_grid{
         grid-template-columns: 1fr 200px 200px 200px 1fr;
-        grid-template-rows: 80px
-                            auto
-                            auto
-                            auto
+        grid-template-rows: 100px
                             auto
                             auto;
         grid-template-areas: "header header header header header"
-                             "astro astro astro astro astro"
-                             "grand grand grand grand grand"
-                             "magnets magnets magnets magnets magnets"
-                             "coasters coasters coasters coasters coasters"
+                             ". content content content ."
                              "footer footer footer footer footer";
 
     }
 
+    .mods_image {
+      margin-top: 20px;
+    }
+
+    .mods_intro {
+      text-align: justify;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+    }
+
+    .mods_tips {
+      text-align: justify;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+
 }
 
 @media screen and (max-width: 640px){
-    .prints_grid {
+    .mods_grid {
         grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: 80px
+        grid-template-rows: 100px
                             auto
                             auto
                             auto
                             auto
                             auto;
         grid-template-areas: "header header header"
-                             "astro astro astro"
-                             "grand grand grand"
-                             "magnets magnets magnets"
-                             "coasters coasters coasters"
+                             ". image ."
+                             ". intro ."
+                             ". tips ."
+                             "gallery gallery gallery"
                              "footer footer footer";
         background-color: #FFFFFF;
         max-width: auto;
         min-width: 250px;
     }
+    .mods_image {
+      margin-top: 20px;
+    }
+    .mods_intro {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    .mods_tips {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
 
 }
 
+/* Mods Style*/
+/************/
 
-#astro_prints {
-  grid-area: astro;
-  background-color: #D1D2D5;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
+.mods_grid {
+  background-color: #A9A9A9;
 }
 
-#nationalparks_prints {
-  grid-area: grand;
-  background-color: #D1D2D5;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-}
-
-#magnets_prints {
-  grid-area: magnets;
-  background-color: #D1D2D5;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-}
-
-#coasters_prints {
-  grid-area: coasters;
-  background-color: #D1D2D5;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-}
-
-.prints h2 {
-  padding-top: 20px;
-  text-align: center;
-}
-
-.prints h3 {
-  padding-top: 20px;
-  text-align: center;
-}
-
-.prints_flex {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  height: auto;
-  padding-bottom: 32px;
-  margin-top: 10px;
-}
-
-.printspost {
+.mods_content {
+  grid-area: content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 400px;
-  height: auto;
-  margin: 20px;
-  background-color: #FFFFFF;
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding-top: 20px;
   padding-bottom: 20px;
+  padding-right: 30px;
 }
 
-.printspost img {
-  width: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.printspost p {
+.mods_content h4 {
   text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 15px;
+}
+
+.mods_content a {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.mods_content p {
+  text-align: justify;
+}
+
+.mods_tips {
+  grid-area: tips;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  border-top: 1px dotted black;
+}
+
+.mods_tips h5 {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 15px;
+}
+
+.mods_tips li {
+  padding-bottom: 5px;
+  margin-left: 20px;
+  text-align: justify;
+}
+
+.mods_gallery {
+  grid-area: gallery;
+  background-color: #F0EFF0;
+  padding: 0px 40px 10px 40px;
+  border-top: 10px solid black;
 }
 
 
